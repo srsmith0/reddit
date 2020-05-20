@@ -1,0 +1,11 @@
+<h1><%= @topic.id ? 'Edit Topic' : 'Create Topic' %></h1>
+this checks to see if the topic id exists.  If it does it will show edit topic.  if not create topic
+<hr />
+<%= form_for [@sub, @topic] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <br />
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+  <%= f.submit %>
+<% end %>

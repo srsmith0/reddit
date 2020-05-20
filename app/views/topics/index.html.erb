@@ -1,0 +1,9 @@
+<h1>Click a Topic To View Content</h1>
+<%= link_to 'Create a new topic', new_sub_topic_path(@sub) %>
+<ul>
+  <% @topics.each do |topic| %>
+    <li><%= link_to topic.name, [@sub, topic] %></li>
+  <%# short hand for writing sub topic patch [@sub, topic] %>
+  <%# link_to topic.name, sub_topic_path([@sub, topic]) this is the long way %>
+  <% end %>
+</ul>
