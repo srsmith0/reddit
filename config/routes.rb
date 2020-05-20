@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'subs#index'
 
   resources :subs do
+    resources :subjects
     resources :topics
 end
   # get '/subs', to: 'subs#index'
